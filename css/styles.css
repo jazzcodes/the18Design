@@ -128,6 +128,11 @@ button{
 
     min-width:200px;
     height: 40px;
+    border-radius: 0;
+    border:0;
+    border:2px solid var(--main-black);
+    outline: none;
+    font-size: 1.8rem;
 }
 
 .btn-email{
@@ -140,6 +145,8 @@ button{
     color:var(--main-white);
     font-size: 1.8rem;
     margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .email input::placeholder{
@@ -147,6 +154,49 @@ button{
     padding-left: 1rem;
     padding-right: 1rem;
     color:var(--main-black);
+}
+
+
+/* About Us */
+
+.about-us{
+    margin-top:7rem;
+}
+
+.about-us__heading{
+
+    min-width:282px;
+    max-width: 282px;
+    font-size: 2.8rem;
+    
+}
+
+
+.about-us__matter{
+    min-width: 320px;
+    max-width: 320px;
+    font-size: 1.8rem;
+}
+
+.about-us__list li{
+    font-size:1.8rem ;
+    display: flex;
+    align-items: center;
+    margin-top:3.1rem;
+}
+
+.about-us__list{
+    list-style: none;
+    padding-left:0;
+    min-width: 320px;
+    max-width: 320px;
+    margin-bottom: 7rem;
+
+}
+
+.about-us__img{
+    width:370px;
+    height: 320px;
 }
 
 @media screen and (min-width:1024px)
@@ -233,6 +283,9 @@ button{
 
          min-width:250px;
          height: 40px;
+         padding-left: 2rem;
+         padding-right: 2rem;
+
      }
      
      .btn-email{
@@ -241,6 +294,39 @@ button{
          height: 40px;
          margin-left:-0.3rem;
          margin-bottom: 0;
+     }
+
+     .about-us{
+        display: flex;
+        justify-content: space-between;
+        
+     }
+
+     .about-us__img{
+        order:-1;
+        width:500px;
+        height: 432px;
+     }
+
+     .about-us__heading{
+        min-width:481px;
+        max-width: 481px;
+        font-size: 6rem;
+     }
+
+     .about-us__matter{
+        min-width:580px;
+        max-width: 580px;
+        font-size: 1.8rem;
+     }
+
+     .about-us__list{
+        min-width:580px;
+        max-width: 580px;
+     }
+
+     .about-us__list li{
+        font-size: 1.8rem;
      }
 
      
@@ -257,6 +343,25 @@ button{
         min-width:721px;
         max-width: 721px;
     }
+
+    .about-us__img{
+        order:-1;
+        width:500px;
+        height: 500px;
+     }
+
+     .about-us__heading{
+        min-width:750px;
+        max-width: 750px;
+
+     }
+
+     .about-us__matter{
+        min-width:712px;
+        max-width: 712px;
+     
+     }
+
 }
 
 @media screen and (min-width:2560px)
@@ -267,5 +372,11 @@ button{
 
     .hero{
         justify-content: center;
+        gap:8rem;
+    }
+
+    .about-us{
+        justify-content: center;
+        gap:8rem;
     }
 }
