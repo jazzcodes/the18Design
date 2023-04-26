@@ -87,6 +87,8 @@ button{
 .hero{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap:3rem;
 }
 
@@ -118,6 +120,7 @@ button{
 }
 
 .email{
+    display: flex;
     min-width: 320px;
     max-width: 323px;
 }
@@ -161,6 +164,10 @@ button{
 
 .about-us{
     margin-top:7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-us__heading{
@@ -197,6 +204,55 @@ button{
 .about-us__img{
     width:370px;
     height: 320px;
+}
+
+/* HIW */
+
+.hiw{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hiw__heading{
+    font-size: 2.8rem;
+    min-width: 316px;
+    max-width: 316px;
+}
+
+.item__heading{
+    font-size:2rem;
+    font-weight: bold;
+    min-width: 184px;
+    max-width: 184px;
+}
+
+.item__content{
+    font-size: 1.8rem;
+    min-width: 236px;
+    max-width: 236px;
+}
+
+.hiw__item{
+    display: flex;
+    gap:1rem;
+}
+
+.hiw__list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.hiw__item img{
+    width:68px;
+    height: 68px;
+}
+
+
+.hiw__image{
+    width:280px;
+    height: 400px;
 }
 
 @media screen and (min-width:1024px)
@@ -297,7 +353,7 @@ button{
      }
 
      .about-us{
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         
      }
@@ -328,6 +384,47 @@ button{
      .about-us__list li{
         font-size: 1.8rem;
      }
+
+     .hiw{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .hiw__heading{
+        font-size: 6rem;
+        min-width: 398px;
+        max-width: 398px;
+    }
+    
+    .item__heading{
+        font-size:2.8rem;
+        min-width: 400px;
+        max-width: 400px;
+    }
+    
+    .item__content{
+        font-size: 1.8rem;  
+        min-width: 400px;
+        max-width: 400px;
+    }
+    
+    .hiw__item{
+      
+        gap:2rem;
+    }
+    
+
+    .hiw__item img{
+        width:100px;
+        height: 100px;
+    }
+    
+    
+    .hiw__image{
+        width:420px;
+        height: 600px;
+    }
 
      
 }
@@ -362,6 +459,11 @@ button{
      
      }
 
+     .hiw__image{
+        width:490px;
+        height: 700px;
+    }
+
 }
 
 @media screen and (min-width:2560px)
@@ -376,6 +478,11 @@ button{
     }
 
     .about-us{
+        justify-content: center;
+        gap:8rem;
+    }
+
+    .hiw{
         justify-content: center;
         gap:8rem;
     }
