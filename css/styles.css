@@ -29,6 +29,7 @@ body{
     /* align-items: center; */
     padding: 2rem 0.8rem;
     gap:3.5rem;
+    min-width: 100%;
 }
 
 /* Header */
@@ -154,8 +155,8 @@ button{
 
 .email input::placeholder{
     font-size: 1.8rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
     color:var(--main-black);
 }
 
@@ -255,11 +256,66 @@ button{
     height: 400px;
 }
 
+/* Pricing */
+
+.pricing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing__heading{
+    
+    font-size: 2.8rem;
+    min-width:275px;
+    max-width: 275px;
+}
+
+.pricing__matter{
+    font-size:1.8rem;
+    min-width:320px;
+    max-width: 320px;
+}
+
+
+.pricing__img{
+    width:280px;
+    height: 298px;
+}
+
+
+.card__list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.price-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-card{
+    border:2px solid var(--main-black);
+    max-width:320px;
+    min-width: 320px;
+    /* min-height: 540px;
+    max-height: 540px; */
+}
+
+.card__matter{
+    font-size: 2rem;
+}
+
 @media screen and (min-width:1024px)
 {
 
     body{
         padding:3.6rem 3.2rem;
+        width:100vw;
+
     }
 
     header{
@@ -310,7 +366,7 @@ button{
     }
 
     .hero__img{
-        width:550px;
+        width:490px;
         height:580px;
      }
      
@@ -368,12 +424,15 @@ button{
         min-width:481px;
         max-width: 481px;
         font-size: 6rem;
+        
      }
 
+
      .about-us__matter{
-        min-width:580px;
-        max-width: 580px;
+        min-width:450px;
+        max-width: 450px;
         font-size: 1.8rem;
+     
      }
 
      .about-us__list{
@@ -384,6 +443,9 @@ button{
      .about-us__list li{
         font-size: 1.8rem;
      }
+
+
+
 
      .hiw{
         display: flex;
@@ -426,6 +488,37 @@ button{
         height: 600px;
     }
 
+
+    .pricing{
+        margin-top: 7rem;
+    }
+
+    .pricing__first{
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+    }
+
+    .pricing__img
+    {
+        order: -1;
+        width:380px;
+        height: 404px;
+    }
+
+    
+
+    .pricing__heading{
+        font-size: 6rem;
+        min-width: 588px;
+        max-width: 588px;
+    }
+
+    .pricing__matter{
+        min-width: 588px;
+        max-width: 588px;
+
+    }
      
 }
 
@@ -464,6 +557,13 @@ button{
         height: 700px;
     }
 
+    .pricing__img
+    {
+        
+        width:470px;
+        height: 500px;
+    }
+
 }
 
 @media screen and (min-width:2560px)
@@ -483,6 +583,12 @@ button{
     }
 
     .hiw{
+        justify-content: center;
+        gap:8rem;
+    }
+
+    .pricing__first
+    {
         justify-content: center;
         gap:8rem;
     }
