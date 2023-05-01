@@ -263,6 +263,7 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .pricing__heading{
@@ -288,6 +289,11 @@ button{
 .card__list{
     list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top:4rem;
+    margin-bottom:4rem;
 }
 
 .price-cards{
@@ -295,6 +301,7 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 }
 
 .price-card{
@@ -303,18 +310,83 @@ button{
     min-width: 320px;
     /* min-height: 540px;
     max-height: 540px; */
+    padding: 3rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .card__matter{
     font-size: 2rem;
 }
 
+.card__item{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.card__button, .card__button-white{
+    font-size: 1.8rem;
+    height: 52px; 
+    width: 240px;
+    /* position: relative;
+    left:7%; */
+
+}
+
+.card-white .card__button, .card-gray .card__button{
+    background-color: var(--main-black);
+    color:var(--main-white);
+}
+
+.card-white{
+    background-color: var(--main-white);
+}
+
+.card-black{
+    background-color: black;
+    color: var(--main-white);
+}
+
+.card__button-white{
+    background-color: white;
+
+}
+
+
+.dollar{
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    top:-4rem;
+}
+
+.amount{
+    font-size: 8rem;
+}
+
+.mo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.pricing__first{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    text-align: right;
+}
+
+
 @media screen and (min-width:1024px)
 {
 
     body{
         padding:3.6rem 3.2rem;
-        width:100vw;
+        /* width:100vw; */
 
     }
 
@@ -490,13 +562,8 @@ button{
 
 
     .pricing{
-        margin-top: 7rem;
-    }
-
-    .pricing__first{
-        display: flex;
-        justify-content: space-between;
-        text-align: right;
+        margin-top: 7rem;     
+    
     }
 
     .pricing__img
@@ -519,7 +586,26 @@ button{
         max-width: 588px;
 
     }
+
+    .price-cards{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .price-card{
+        min-height: 644px;
+        max-width:304px;
+        min-width: 304px;
+    }
+
+
+    .pricing__first{
+      
+        flex-direction: row;
+        justify-content: space-between;
      
+    }
+    
 }
 
 
@@ -564,6 +650,14 @@ button{
         height: 500px;
     }
 
+    
+    .price-card{
+        max-width:416px;
+        min-width: 416px;
+    }
+
+    
+
 }
 
 @media screen and (min-width:2560px)
@@ -591,5 +685,15 @@ button{
     {
         justify-content: center;
         gap:8rem;
+    }
+
+    .price-cards{
+        justify-content: center;
+    }
+
+    .price-card{
+        max-width:436px;
+        min-width: 436px;
+        
     }
 }
