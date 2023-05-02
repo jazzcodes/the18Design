@@ -258,13 +258,13 @@ button{
 
 /* Pricing */
 
-.pricing{
+/* .pricing{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-}
+} */
 
 .pricing__heading{
     
@@ -302,6 +302,8 @@ button{
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 12rem;
 }
 
 .price-card{
@@ -376,8 +378,104 @@ button{
 .pricing__first{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     text-align: right;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+/* FAQs */
+
+.faqs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq__heading{
+    font-size: 2.8rem;
+}
+
+.faq__matter{
+    font-size: 1.8rem;
+    min-width: 320px;
+    max-width: 320px;
+}
+
+.faq__image{
+    min-width: 360px;
+    max-width: 360px;
+}
+
+.faq__accordion{
+    min-width: 320px;
+    max-width: 320px;
+
+}
+
+.question-box, .answer-box{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#a1{
+    display: none;
+}
+
+#a2{
+    display: none;
+}
+
+#a3{
+    display: none;
+}
+
+#a4{
+    display: none;
+}
+
+#a5{
+    display: none;
+}
+
+.faq__first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.answer{
+    font-size: 1.8rem;
+    /* min-width:310px;
+    max-width: 310px;
+     */
+}
+
+.plus, .minus{
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+}
+
+.plus{
+    position: relative;
+    top:2rem;
+}
+
+.minus{
+    position: relative;
+    top: 1rem;
+}
+
+.expand{
+    display:visible;
 }
 
 
@@ -600,10 +698,33 @@ button{
 
 
     .pricing__first{
-      
         flex-direction: row;
         justify-content: space-between;
      
+    }
+
+    .faq__heading{
+        font-size: 6rem;
+    }
+
+    .faq__matter{
+        min-width: 532px;
+        max-width: 532px;
+    }
+
+    .faq__accordion{
+        min-width: 840px;
+        max-width: 840px;
+    }
+
+    .faq__first{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .faqs{
+        flex-direction: row;
+        align-items: flex-start;
     }
     
 }
@@ -668,23 +789,23 @@ button{
 
     .hero{
         justify-content: center;
-        gap:8rem;
+        gap:29rem;
     }
 
     .about-us{
         justify-content: center;
-        gap:8rem;
+        gap:29rem;
     }
 
     .hiw{
         justify-content: center;
-        gap:8rem;
+        gap:29rem;
     }
 
     .pricing__first
     {
         justify-content: center;
-        gap:8rem;
+        gap:29rem;
     }
 
     .price-cards{
