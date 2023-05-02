@@ -725,6 +725,7 @@ button{
     .faqs{
         flex-direction: row;
         align-items: flex-start;
+        justify-content: space-between;
     }
     
 }
@@ -816,5 +817,11 @@ button{
         max-width:436px;
         min-width: 436px;
         
+    }
+
+    .faqs{
+  
+        justify-content: center;
+        gap:29rem;
     }
 }
