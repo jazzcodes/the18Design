@@ -27,7 +27,7 @@ body{
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
-    padding: 2rem 0.8rem;
+    /* padding: 2rem 0.8rem; */
     gap:3.5rem;
     min-width: 100%;
 }
@@ -38,6 +38,7 @@ header{
     /* display: flex; */
     /* justify-content: space-between; */
     min-width: 320px;
+    padding: 2rem 0.8rem;
 
    
     
@@ -81,6 +82,10 @@ button{
 .btn-login{
     color:var(--main-black);
     background-color: var(--main-gray);
+}
+
+main{
+    padding: 2rem 0.8rem;
 }
 
 /* Hero */
@@ -419,25 +424,10 @@ button{
     
 }
 
-#a1{
+#a1, #a2, #a3, #a4, #a5{
     display: none;
 }
 
-#a2{
-    display: none;
-}
-
-#a3{
-    display: none;
-}
-
-#a4{
-    display: none;
-}
-
-#a5{
-    display: none;
-}
 
 .faq__first{
     display: flex;
@@ -471,11 +461,118 @@ button{
 
 .minus{
     position: relative;
-    top: 1rem;
+    top: 2rem;
 }
 
 .expand{
     display:visible;
+}
+
+#q1-minus, #q2-minus, #q3-minus, #q4-minus, #q5-minus{
+    display: none;
+}
+
+#q1-plus, #q2-plus, #q3-plus, #q4-plus, #q5-plus{
+    display: visible;
+}
+
+footer{
+    background-color: var(--main-black);
+    position: relative;
+    padding: 5.2rem 2rem;
+}
+
+.logo__white{
+    height: 52px;
+    width: 52px;
+}
+
+.socials img{
+    height: 60px;
+    width: 60px;
+    border: 3px dotted gray;
+}
+
+.footer__email{
+    color: var(--main-white);
+
+}
+
+.email__heading{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.email__address{
+    font-size: 1.8rem;
+}
+
+.links-1, .links-2{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    list-style: none;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.links1__item a, .links2__item a
+{
+    text-decoration: none;
+    color: var(--main-white);
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.email--black{
+    display: flex;
+    min-width: 320px;
+    max-width: 323px;
+}
+
+.email--black input{
+    min-width:200px;
+    height: 40px;
+    border-radius: 0;
+    border:0;
+    border:2px solid var(--main-white);
+    outline: none;
+    font-size: 1.8rem;
+    background-color: black;
+   
+}
+
+.btn-email--white{
+    min-width:120px;
+    height: 40px;
+    background-color: var(--main-white);
+    color:var(--main-black);
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.email--black input::placeholder{
+    color: var(--main-white);
+}
+
+.email-box--black
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.email-box--black label{
+    color: var(--main-white);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.copyright{
+    font-size: 1.8rem;
+    color: var(--main-white);
 }
 
 
@@ -483,7 +580,7 @@ button{
 {
 
     body{
-        padding:3.6rem 3.2rem;
+        /* padding:3.6rem 3.2rem; */
         /* width:100vw; */
 
     }
@@ -493,6 +590,11 @@ button{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding:3.6rem 3.2rem;
+    }
+
+    main{
+        padding:3.6rem 3.2rem;
     }
 
     .menu{
@@ -728,12 +830,63 @@ button{
         justify-content: space-between;
     }
     
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .email-box--black{
+        width: 60%;
+    }
+
+    .copyright{
+        width: 60%;
+    }
+
+    .links-1{
+        /* order: 1; */
+        /* position: relative;
+        top: 10rem;
+        left: -19.5rem; */
+    }
+
+    .socials{
+        /* order: -1; */
+        /* position: relative;
+        left: -34rem;
+        top: 11rem; */
+    }
+
+    .links-2{
+        /* order: 1; */
+        /* position: relative;
+        left: -4rem; */
+    }
+    .footer__email{
+        
+        /* position: relative;
+        left: 40rem;
+        top: -1rem; */
+    
+        }
+
+
 }
 
 
 @media screen and (min-width:1440px)
 {
     body{
+        /* padding:3.6rem 8rem; */
+    }
+
+    header{
+        padding:3.6rem 8rem;
+    }
+
+    main{
         padding:3.6rem 8rem;
     }
 
@@ -778,13 +931,29 @@ button{
         min-width: 416px;
     }
 
+    /* .footer__email{
+        left: 32rem;
+    }
     
 
+    .links-1{
+        position: relative;
+        top: 0rem;
+        left: -4.5rem;
+    } */
 }
 
 @media screen and (min-width:2560px)
 {
     body{
+        /* padding:3.6rem 14rem; */
+    }
+
+    main{
+        padding:3.6rem 14rem;
+    }
+
+    header{
         padding:3.6rem 14rem;
     }
 

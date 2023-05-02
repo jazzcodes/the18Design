@@ -23,59 +23,79 @@ q1Plus.addEventListener("click", function(){
     
    
     a1.style.display="flex";
+    q1Minus.style.display="initial";
+    q1Plus.style.display="none";
     console.log("a1 expanded");
 });
 
 q2Plus.addEventListener("click", function(){
     
     a2.style.display="flex";
+    q2Minus.style.display="initial";
+    q2Plus.style.display="none";
     console.log("a2 expanded");
 });
 
 q3Plus.addEventListener("click", function(){
     
     a3.style.display="flex";
+    q3Minus.style.display="initial";
+    q3Plus.style.display="none";
     console.log("a3 expanded");
 });
 
 q4Plus.addEventListener("click", function(){
     
     a4.style.display="flex";
+    q4Minus.style.display="initial";
+    q4Plus.style.display="none";
     console.log("a4 expanded");
 });
 
 q5Plus.addEventListener("click", function(){
     
     a5.style.display="flex";
+    q5Minus.style.display="initial";
+    q5Plus.style.display="none";
     console.log("a5 expanded");
 });
 
 q1Minus.addEventListener("click", function(){
     
     a1.style.display="none";
+    q1Minus.style.display="none";
+    q1Plus.style.display="initial";
     console.log("a1 hidden");
 });
 
 q2Minus.addEventListener("click", function(){
     
     a2.style.display="none";
+    q2Minus.style.display="none";
+    q2Plus.style.display="initial";
     console.log("a2 hidden");
 });
 
 q3Minus.addEventListener("click", function(){
     
     a3.style.display="none";
+    q3Minus.style.display="none";
+    q3Plus.style.display="initial";
     console.log("a3 hidden");
 });
 
 q4Minus.addEventListener("click", function(){
     
     a4.style.display="none";
+    q4Minus.style.display="none";
+    q4Plus.style.display="initial";
     console.log("a4 hidden");
 });
 
 q5Minus.addEventListener("click", function(){
     
     a5.style.display="none";
+    q5Minus.style.display="none";
+    q5Plus.style.display="initial";
     console.log("a5 hidden");
 });
