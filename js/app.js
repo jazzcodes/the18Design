@@ -99,3 +99,28 @@ q5Minus.addEventListener("click", function(){
     q5Plus.style.display="initial";
     console.log("a5 hidden");
 });
+
+
+
+const menu=document.querySelector(".menu");
+const cross=document.querySelector(".cross");
+const mobileMenu=document.querySelector(".nav-ul-mobile");
+
+function openMenu()
+{
+    menu.style.display="none";
+    cross.style.display="initial";
+    mobileMenu.style.display="flex";
+
+}
+
+function closeMenu()
+{
+    menu.style.display="initial";
+    cross.style.display="none";
+    mobileMenu.style.display="none";
+
+}
+
+menu.addEventListener("click", openMenu);
+cross.addEventListener("click", closeMenu);

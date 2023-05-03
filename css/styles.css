@@ -10,6 +10,16 @@
 
 }
 
+@font-face {
+    font-family: customFontsRegular;
+    src: url(../fonts/PPNeueMachina-InktrapRegular.otf);
+}
+
+@font-face {
+    font-family: customFontsBold;
+    src: url(../fonts/PPNeueMachina-InktrapUltrabold.otf);
+}
+
 
 html{
     font-size: 62.5%;
@@ -30,6 +40,8 @@ body{
     /* padding: 2rem 0.8rem; */
     gap:3.5rem;
     min-width: 100%;
+    overflow-x: hidden;
+    
 }
 
 /* Header */
@@ -39,6 +51,7 @@ header{
     /* justify-content: space-between; */
     min-width: 320px;
     padding: 2rem 0.8rem;
+    font-family: customFontsRegular;
 
    
     
@@ -47,6 +60,18 @@ header{
 .logo, .menu{
     width:52px;
     height: 52px;
+    cursor: pointer;
+}
+
+.cross{
+    font-size: 5rem;
+    rotate: 45deg;
+    /* position: relative;
+    top: -5rem; */
+    font-weight: bold;
+    display: none;
+    margin: 0;
+    cursor: pointer;
 }
 
 .nav-ul{
@@ -60,6 +85,33 @@ header{
 nav{
     display: flex;
     justify-content: space-between;
+}
+
+.nav-ul-mobile{
+    background-color: var(--main-black);
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    /* top: 7rem; */
+    list-style: none;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    gap: 3rem;
+    display: none;
+    
+}
+
+.nav__item-m a{
+    text-decoration: none;
+    padding-left: 0;
+    color: var(--main-white);
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: customFontsRegular;
 }
 
 button{
@@ -86,6 +138,7 @@ button{
 
 main{
     padding: 2rem 0.8rem;
+    min-width: 100vw;
 }
 
 /* Hero */
@@ -96,6 +149,7 @@ main{
     justify-content: center;
     align-items: center;
     gap:3rem;
+    font-family: customFontsRegular;
 }
 
 .hero__img{
@@ -105,8 +159,9 @@ main{
 
 .hero__heading{
     font-size: 2.8rem;
-    min-width: 320px;
-    max-width: 320px;
+    min-width: 353px;
+    max-width: 353px;
+    font-weight: bold;
 }
 
 .hero__matter{
@@ -114,8 +169,8 @@ main{
     margin-bottom: 2rem;
     font-size:1.8rem;
     line-height: 1.5;
-    min-width: 320px;
-    max-width: 320px;
+    min-width: 312px;
+    max-width: 312px;
 }
 
 .payments{
@@ -141,7 +196,7 @@ main{
     border:0;
     border:2px solid var(--main-black);
     outline: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .btn-email{
@@ -152,14 +207,14 @@ main{
     height: 40px;
     background-color: var(--main-black);
     color:var(--main-white);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
 .email input::placeholder{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     /* padding-left: 1rem;
     padding-right: 1rem; */
     color:var(--main-black);
@@ -174,28 +229,35 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: customFontsRegular;
 }
 
 .about-us__heading{
 
     min-width:282px;
-    max-width: 282px;
+    max-width: 300px;
     font-size: 2.8rem;
+    font-weight: bold;
     
 }
 
 
 .about-us__matter{
-    min-width: 320px;
-    max-width: 320px;
+    min-width: 315px;
+    max-width: 315px;
+    height: 208px;
     font-size: 1.8rem;
+    line-height: 1.5;
+
 }
 
 .about-us__list li{
     font-size:1.8rem ;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-top:3.1rem;
+    line-height: 1.5;
+
 }
 
 .about-us__list{
@@ -219,25 +281,31 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: customFontsRegular;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
 }
 
 .hiw__heading{
     font-size: 2.8rem;
-    min-width: 316px;
-    max-width: 316px;
+    min-width: 344px;
+    max-width: 344px;
+    font-weight: bold;
 }
 
 .item__heading{
     font-size:2rem;
     font-weight: bold;
-    min-width: 184px;
-    max-width: 184px;
+    min-width: 229px;
+    max-width: 194px;
+    font-family: customFontsBold;
 }
 
 .item__content{
     font-size: 1.8rem;
     min-width: 236px;
     max-width: 236px;
+    line-height: 1.5;
 }
 
 .hiw__item{
@@ -271,17 +339,29 @@ main{
 
 } */
 
+.pricing__inside
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
 .pricing__heading{
     
     font-size: 2.8rem;
     min-width:275px;
-    max-width: 275px;
+    max-width: 303px;
+    font-family: customFontsRegular;
+    font-weight: bold;
 }
 
 .pricing__matter{
     font-size:1.8rem;
     min-width:320px;
     max-width: 320px;
+    font-family: customFontsRegular;
 }
 
 
@@ -299,6 +379,7 @@ main{
     gap: 2rem;
     margin-top:4rem;
     margin-bottom:4rem;
+    font-family: customFontsRegular;
 }
 
 .price-cards{
@@ -322,10 +403,12 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .card__matter{
     font-size: 2rem;
+    font-family: customFontsRegular;
 }
 
 .card__item{
@@ -341,6 +424,7 @@ main{
     width: 240px;
     /* position: relative;
     left:7%; */
+    font-family: customFontsRegular;
 
 }
 
@@ -369,15 +453,18 @@ main{
     font-weight: bold;
     position: relative;
     top:-4rem;
+    font-family: customFontsBold;
 }
 
 .amount{
     font-size: 8rem;
+    font-family: customFontsBold;
 }
 
 .mo{
     font-size: 2rem;
     font-weight: bold;
+    font-family: customFontsBold;
 }
 
 .pricing__first{
@@ -395,6 +482,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: customFontsRegular;
 }
 
 .faq__heading{
@@ -408,8 +496,8 @@ main{
 }
 
 .faq__image{
-    min-width: 360px;
-    max-width: 360px;
+    width: 360px;
+    height: 372px;
 }
 
 .faq__accordion{
@@ -439,6 +527,7 @@ main{
 .question{
     font-size: 2rem;
     font-weight: bold;
+    font-family: customFontsBold;
 }
 
 .answer{
@@ -480,6 +569,9 @@ footer{
     background-color: var(--main-black);
     position: relative;
     padding: 5.2rem 2rem;
+    min-width: 360px;
+    max-width: 100vw;
+    font-family: customFontsRegular;
 }
 
 .logo__white{
@@ -501,6 +593,7 @@ footer{
 .email__heading{
     font-size: 2rem;
     font-weight: bold;
+    font-family: customFontsBold;
 }
 
 .email__address{
@@ -538,7 +631,8 @@ footer{
     border:2px solid var(--main-white);
     outline: none;
     font-size: 1.8rem;
-    background-color: black;
+    background-color: var(--main-black);
+    color: var(--main-white);
    
 }
 
@@ -568,6 +662,7 @@ footer{
     color: var(--main-white);
     font-size: 2rem;
     font-weight: bold;
+    font-family: customFontsBold;
 }
 
 .copyright{
@@ -576,12 +671,14 @@ footer{
 }
 
 
+
 @media screen and (min-width:1024px)
 {
 
     body{
         /* padding:3.6rem 3.2rem; */
         /* width:100vw; */
+        overflow-x: hidden;
 
     }
 
@@ -688,8 +785,8 @@ footer{
 
      .about-us__img{
         order:-1;
-        width:500px;
-        height: 432px;
+        width:426px;
+        height: 426px;
      }
 
      .about-us__heading{
@@ -701,8 +798,8 @@ footer{
 
 
      .about-us__matter{
-        min-width:450px;
-        max-width: 450px;
+        min-width:560px;
+        max-width: 560px;
         font-size: 1.8rem;
      
      }
@@ -815,8 +912,8 @@ footer{
     }
 
     .faq__accordion{
-        min-width: 840px;
-        max-width: 840px;
+        min-width: 720px;
+        max-width: 720px;
     }
 
     .faq__first{
@@ -830,6 +927,11 @@ footer{
         justify-content: space-between;
     }
     
+    .faq__image{
+        width: 249px;
+        height: 275px;
+    }
+
     footer{
         display: flex;
         flex-direction: row;
@@ -838,41 +940,66 @@ footer{
     }
 
     .email-box--black{
-        width: 60%;
+       min-width: 80%;
+       max-width: 80%;
+        order: 6;
     }
 
-    .copyright{
-        width: 60%;
-    }
+
 
     .links-1{
-        /* order: 1; */
-        /* position: relative;
-        top: 10rem;
-        left: -19.5rem; */
+        order: 5;
+        min-width: 56%;
+        max-width: 56%;
     }
 
     .socials{
-        /* order: -1; */
-        /* position: relative;
-        left: -34rem;
-        top: 11rem; */
+        order: 4;
+        
+     
     }
 
     .links-2{
-        /* order: 1; */
-        /* position: relative;
-        left: -4rem; */
+        order: 3;
+        min-width: 15%;
+        max-width: 15%;
+      
     }
+
     .footer__email{
+        order: 2;
+        min-width: 30%;
+        max-width: 30%;
+        /* margin-left: 19rem; */
+       
+
+     }
+     
+     .logo__white{
+        order: 1;
         
-        /* position: relative;
-        left: 40rem;
-        top: -1rem; */
-    
-        }
+        
+     }
 
+     .copyright{
+        order: 7;
+        min-width: 60%;
+        max-width: 60%;
+     }
 
+     .footer__image-container{
+        min-width: 33%;
+        max-width: 33%;
+     }
+
+}
+
+@media screen and (min-width:1140px)
+{
+    .faq__image{
+        width: 360px;
+        height: 372px;
+    }
 }
 
 
@@ -931,16 +1058,62 @@ footer{
         min-width: 416px;
     }
 
-    /* .footer__email{
-        left: 32rem;
-    }
-    
+    .email-box--black{
+        /* min-width: 80%;
+        max-width: 80%; */
+         order: 6;
+         margin-top: 4rem;
+     }
+ 
+ 
+ 
+     .links-1{
+         order: 3;
+         min-width: 18%;
+         max-width: 18%;
+     }
+ 
+     .socials{
+         order: 5;
+         
+      
+     }
+ 
+     .links-2{
+         order: 4;
+         /* min-width: 15%;
+         max-width: 15%; */
+       
+     }
+ 
+     .footer__email{
+         order: 2;
+         min-width: 15%;
+         max-width: 15%;
+         /* margin-left: 19rem; */
+        
+ 
+      }
+      
+      .logo__white{
+         order: 1;
+         
+         
+      }
+ 
+      .copyright{
+         order: 7;
+         /* min-width: 60%;
+         max-width: 60%; */
+      }
+ 
+      .footer__image-container{
+         min-width: 50%;
+         max-width: 50%;
+      }
 
-    .links-1{
-        position: relative;
-        top: 0rem;
-        left: -4.5rem;
-    } */
+
+ 
 }
 
 @media screen and (min-width:2560px)
@@ -992,5 +1165,9 @@ footer{
   
         justify-content: center;
         gap:29rem;
+    }
+
+    .email-box--black{
+        min-width: 90%;
     }
 }
