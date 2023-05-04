@@ -1,0 +1,1378 @@
+*, *::after,*::before{
+    box-sizing: border-box;
+}
+
+:root{
+
+    --main-black:#151515;
+    --main-white:#FFFFFF;
+    --main-gray:#F0F0F0;
+
+}
+
+@font-face {
+    font-family: customFontsRegular;
+    src: url(../fonts/PPNeueMachina-InktrapRegular.otf);
+}
+
+@font-face {
+    font-family: customFontsBold;
+    src: url(../fonts/PPNeueMachina-InktrapUltrabold.otf);
+}
+
+@font-face {
+    font-family: customFontsLight;
+    src: url(../fonts/PPNeueMachina-InktrapLight.otf);
+}
+
+
+html{
+    font-size: 62.5%;
+    height: 100vh;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: var(--main-gray);
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* padding: 2rem 0.8rem; */
+    gap:3.5rem;
+    min-width: 100%;
+    overflow-x: hidden;
+    
+}
+
+/* Header */
+
+header{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    min-width: 320px;
+    padding: 2rem 0.8rem;
+    font-family: customFontsLight;
+
+   
+    
+}
+
+.logo, .menu{
+    width:52px;
+    height: 52px;
+    cursor: pointer;
+}
+
+.cross{
+    font-size: 5rem;
+    rotate: 45deg;
+    /* position: relative;
+    top: -5rem; */
+    font-weight: bold;
+    display: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+.nav-ul{
+    display: none;
+}
+
+.action-buttons{
+    display: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-ul-mobile{
+    background-color: var(--main-black);
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    /* top: 7rem; */
+    list-style: none;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    gap: 3rem;
+    display: none;
+    
+}
+
+.nav__item-m a{
+    text-decoration: none;
+    padding-left: 0;
+    color: var(--main-white);
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: customFontsRegular;
+}
+
+button{
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-header{
+    height: 52px;
+    width: 145px;
+    font-size:1.8rem;
+}
+
+.btn-signup{
+    color:var(--main-white);
+    background-color: var(--main-black);
+}
+
+.btn-login{
+    color:var(--main-black);
+    background-color: var(--main-gray);
+}
+
+
+.btn-login:hover, 
+.btn-login:focus{
+
+    background-color: var(--main-white);
+}
+
+.btn-signup:hover, 
+.btn-signup:focus
+{
+    color: var(--main-black);
+    background-color: var(--main-white);
+}
+
+main{
+    padding: 2rem 0.8rem;
+    min-width: 100vw;
+}
+
+/* Hero */
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    
+}
+
+.hero__img{
+   width:330px;
+   height:348px;
+}
+
+.hero__heading{
+    font-size: 2.8rem;
+    min-width: 353px;
+    max-width: 353px;
+    /* font-weight: bold; */
+    margin-top: -4rem;
+    font-family: customFontsRegular;
+}
+
+.hero__matter{
+    margin-top:2rem;
+    margin-bottom: 2rem;
+    font-size:1.8rem;
+    line-height: 1.5;
+    min-width: 337px;
+    max-width: 337px;
+    font-family: customFontsLight;
+}
+
+.payments{
+    display: flex;
+    justify-content: space-between;
+    min-width: 320px;
+    max-width: 320px;
+}
+
+.email{
+    display: flex;
+    min-width: 320px;
+    max-width: 323px;
+}
+
+.email input{
+    /* width:280px;
+    height: 52px; */
+
+    min-width:200px;
+    height: 40px;
+    border-radius: 0;
+    border:0;
+    border:2px solid var(--main-black);
+    outline: none;
+    font-size: 1.5rem;
+    font-family: customFontsLight;
+}
+
+.btn-email{
+    /* width:198px;
+    height: 52px; */
+
+    min-width:120px;
+    height: 40px;
+    background-color: var(--main-black);
+    color:var(--main-white);
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: customFontsLight;
+}
+
+.btn-email:hover, .btn-email:focus{
+    background-color: var(--main-gray);
+    color: var(--main-black);
+    border: 2px solid var(--main-black);
+}
+
+/* .btn-email span{
+    height: 40px ;
+    display: inline-block;
+} */
+
+.email input::placeholder{
+    font-size: 1.5rem;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+    color:var(--main-black);
+    font-family: customFontsLight;
+}
+
+
+/* About Us */
+
+.about-us{
+    margin-top:7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.about-us__heading{
+
+    min-width:282px;
+    max-width: 300px;
+    font-size: 2.8rem;
+    /* font-weight: bold; */
+    font-family: customFontsRegular;
+    
+}
+
+
+.about-us__matter{
+    min-width: 315px;
+    max-width: 315px;
+    height: 208px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-family: customFontsLight;
+
+}
+
+.about-us__list li{
+    font-size:1.8rem ;
+    display: flex;
+    align-items: flex-start;
+    margin-top:3.1rem;
+    line-height: 1.5;
+    font-family: customFontsLight;
+
+}
+
+.about-us__list{
+    list-style: none;
+    padding-left:0;
+    min-width: 320px;
+    max-width: 320px;
+    margin-bottom: 7rem;
+
+}
+
+.about-us__img{
+    width:370px;
+    height: 320px;
+}
+
+/* HIW */
+
+.hiw{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: customFontsRegular;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.hiw__heading{
+    font-size: 2.8rem;
+    min-width: 344px;
+    max-width: 344px;
+    /* font-weight: bold; */
+}
+
+.item__heading{
+    font-size:2rem;
+    font-weight: bold;
+    min-width: 229px;
+    max-width: 194px;
+    font-family: customFontsBold;
+}
+
+.item__content{
+    font-size: 1.8rem;
+    min-width: 236px;
+    max-width: 236px;
+    line-height: 1.5;
+    
+}
+
+.item__matter{
+    min-width: 238px;
+    font-family: customFontsLight;
+}
+
+.hiw__item{
+    display: flex;
+    gap:1rem;
+}
+
+.hiw__list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.hiw__item img{
+    width:68px;
+    height: 68px;
+}
+
+
+.hiw__image{
+    width: 348px;
+    height: 294px;
+}
+
+/* Pricing */
+
+/* .pricing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+} */
+
+.pricing__inside
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.pricing__heading{
+    
+    font-size: 2.8rem;
+    min-width:275px;
+    max-width: 303px;
+    font-family: customFontsRegular;
+    /* font-weight: bold; */
+}
+
+.pricing__matter{
+    font-size:1.8rem;
+    min-width:320px;
+    max-width: 321px;
+    font-family: customFontsLight;
+    line-height: 1.5;
+}
+
+
+.pricing__img{
+    width:280px;
+    height: 298px;
+}
+
+
+.card__list{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top:4rem;
+    margin-bottom:4rem;
+    font-family: customFontsLight;
+}
+
+.price-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 12rem;
+}
+
+.price-card{
+    border:2px solid var(--main-black);
+    max-width:320px;
+    min-width: 320px;
+    /* min-height: 540px;
+    max-height: 540px; */
+    padding: 3rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.card__matter{
+    font-size: 2rem;
+    font-family: customFontsRegular;
+}
+
+.card__item{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 1.8rem;
+    min-width: 299px;
+    font-family: customFontsLight;
+}
+
+.card__button, .card__button-white{
+    font-size: 1.8rem;
+    height: 52px; 
+    width: 240px;
+    /* position: relative;
+    left:7%; */
+    font-family: customFontsRegular;
+
+}
+
+.card-white .card__button, .card-gray .card__button{
+    background-color: var(--main-black);
+    color:var(--main-white);
+}
+
+.card-white .card__button:hover, 
+.card-gray .card__button:hover,
+.card-white .card__button:focus, 
+.card-gray .card__button:focus{
+    background-color: var(--main-white);
+    color:var(--main-black);
+}
+
+.card-white{
+    background-color: var(--main-white);
+}
+
+.card-black{
+    background-color: var(--main-black);
+    color: var(--main-white);
+}
+
+.card__button-white{
+    background-color: white;
+
+}
+
+.card__button-white:hover, .card__button-white:focus {
+    background-color: var(--main-black);
+    color: var(--main-white);
+    border: 2px solid var(--main-white);
+
+}
+
+.dollar{
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    top:-4rem;
+    font-family: customFontsBold;
+}
+
+.amount{
+    font-size: 8rem;
+    font-family: customFontsBold;
+}
+
+.mo{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: customFontsBold;
+}
+
+.pm{
+    display: none;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: customFontsBold;
+}
+
+.pricing__first{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+/* FAQs */
+
+.faqs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: customFontsLight;
+}
+
+.faq__heading{
+    font-size: 2.8rem;
+}
+
+.faq__matter{
+    font-size: 1.8rem;
+    min-width: 320px;
+    max-width: 320px;
+    line-height: 1.5;
+}
+
+.faq__image{
+    width: 360px;
+    height: 372px;
+}
+
+.faq__accordion{
+    min-width: 320px;
+    max-width: 320px;
+
+}
+
+.question-box, .answer-box{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#a1, #a2, #a3, #a4, #a5{
+    display: none;
+}
+
+
+.faq__first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: customFontsBold;
+}
+
+.answer{
+    font-size: 1.8rem;
+    /* min-width:310px;
+    max-width: 310px;
+     */
+    
+     line-height: 1.5;
+     font-family: customFontsLight;
+}
+
+.plus, .minus{
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+}
+
+.plus{
+    position: relative;
+    top:2rem;
+}
+
+.minus{
+    position: relative;
+    top: 2rem;
+}
+
+.expand{
+    display:visible;
+}
+
+#q1-minus, #q2-minus, #q3-minus, #q4-minus, #q5-minus{
+    display: none;
+}
+
+#q1-plus, #q2-plus, #q3-plus, #q4-plus, #q5-plus{
+    display: visible;
+}
+
+footer{
+    background-color: var(--main-black);
+    position: relative;
+    padding: 5.2rem 2rem;
+    min-width: 360px;
+    max-width: 100vw;
+    font-family: customFontsLight;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+}
+
+.logo__white{
+    height: 52px;
+    width: 52px;
+}
+
+.socials img{
+    height: 60px;
+    width: 60px;
+    border: 3px dotted gray;
+}
+
+.footer__email{
+    color: var(--main-white);
+    position: relative;
+    left: 15rem;
+    top: -7rem;
+    width: 5%;
+    
+}
+
+.footer__image-container{
+    width: 50%;
+}
+
+.email__heading{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: customFontsBold;
+}
+
+.email__address{
+    font-size: 1.8rem;
+}
+
+.links-1, .links-2{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    list-style: none;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.links1__item a, .links2__item a
+{
+    text-decoration: none;
+    color: var(--main-white);
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.links-1{
+    /* min-width: 60%;
+    max-width: 60%; */
+    margin-top: 3rem;
+}
+
+.links-2{
+    /* min-width: 216px;
+    max-width: 216px; */
+}
+
+.email--black{
+    display: flex;
+    min-width: 320px;
+    max-width: 323px;
+
+}
+
+.email--black input{
+    min-width:200px;
+    height: 40px;
+    border-radius: 0;
+    border:0;
+    border:2px solid var(--main-white);
+    outline: none;
+    font-size: 1.8rem;
+    background-color: var(--main-black);
+    color: var(--main-white);
+   
+}
+
+.btn-email--white{
+    min-width:120px;
+    height: 40px;
+    background-color: var(--main-white);
+    color:var(--main-black);
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.btn-email--white:focus, .btn-email--white:hover{
+    background-color: var(--main-black);
+    color: var(--main-white);
+    border: 2px solid var(--main-white);
+}
+
+.email--black input::placeholder{
+    color: var(--main-white);
+}
+
+.email-box--black
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.email-box--black label{
+    color: var(--main-white);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: customFontsBold;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.copyright{
+    font-size: 1.8rem;
+    color: var(--main-white);
+    /* min-width: 297px;
+    max-width: 297px; */
+}
+
+.footer__image-container{
+    width: 40%;
+}
+
+
+@media screen and (min-width:1024px)
+{
+
+    body{
+        /* padding:3.6rem 3.2rem; */
+        /* width:100vw; */
+        overflow-x: hidden;
+
+    }
+
+    header{
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:3.6rem 3.2rem;
+    }
+
+    main{
+        padding:3.6rem 3.2rem;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    nav{
+        display: block;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav-ul{
+        list-style: none;
+        display: flex;
+        gap:3.5rem;
+    }
+
+    .nav__item{
+        font-size:1.8rem;
+    }
+
+    .nav__item a{
+        text-decoration: none;
+        color:var(--main-black);
+        cursor: pointer;
+    }
+
+    .action-buttons{
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:3.5rem;
+    }
+
+    .hero{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero__img{
+        width: 395px;
+        height: 511px;
+     }
+     
+     .hero__heading{
+         font-size: 7rem;
+         min-width: 545px;
+         max-width: 545px;
+     }
+     
+     .hero__matter{
+         margin-top: -4rem;
+         margin-bottom: 3.5rem;
+         font-size:1.8rem;
+         min-width: 567px;
+         max-width: 567px;
+     }
+     
+     
+     .email{
+         min-width: 450px;
+         max-width: 450px;
+         margin-bottom: 3.5rem;
+     }
+     
+     .email input{
+
+         min-width:280px;
+         height: 52px;
+         padding-left: 2rem;
+         padding-right: 2rem;
+         font-size: 1.8rem;
+         margin-bottom: 4rem;
+
+     }
+
+     .email input::placeholder{
+        font-size: 1.8rem;
+     
+     }
+     
+     .btn-email{
+     
+         min-width:198px;
+         height: 52px;
+         margin-left:-0.3rem;
+         margin-bottom: 0;
+         font-size: 1.8rem;
+     }
+
+     .about-us{
+        flex-direction: row;
+        justify-content: space-between;
+        
+     }
+
+     .about-us__img{
+        order:-1;
+        width: 371px;
+        height: 367px;
+     }
+
+     .about-us__heading{
+        min-width:526px;
+        max-width: 526px;
+        font-size: 6rem;
+        
+     }
+
+
+     .about-us__matter{
+        min-width:568px;
+        max-width: 568px;
+        font-size: 1.8rem;
+     
+     }
+
+     .about-us__list{
+        min-width:580px;
+        max-width: 580px;
+        margin-top: -8rem;
+     }
+
+     .about-us__list li{
+        font-size: 1.8rem;
+     }
+
+
+
+
+     .hiw{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .hiw__heading{
+        font-size: 6rem;
+        min-width: 437px;
+        max-width: 437px;
+    }
+    
+    .item__heading{
+        font-size:2.8rem;
+        min-width: 400px;
+        max-width: 400px;
+        font-family: customFontsRegular;
+        font-weight: normal;
+    }
+    
+    .item__content{
+        font-size: 1.8rem;  
+        min-width: 400px;
+        max-width: 400px;
+    }
+    
+    .item__matter{
+        min-width: 493px;
+    }
+
+    .hiw__item{
+      
+        gap:2rem;
+    }
+    
+
+    .hiw__item img{
+        width:100px;
+        height: 100px;
+    }
+    
+    
+    .hiw__image{
+        width:420px;
+        height: 600px;
+    }
+
+
+    .pricing{
+        margin-top: 7rem;     
+    
+    }
+
+    .pricing__img
+    {
+        order: -1;
+        width:298px;
+        height: 368px;
+    }
+
+    
+
+    .pricing__heading{
+        font-size: 6rem;
+        min-width: 647px;
+        max-width: 647px;
+        /* text-align: right; */
+    }
+
+    .pricing__matter{
+        min-width: 350px;
+        max-width: 350px;
+        /* text-align: right; */
+
+    }
+
+    .pricing__inside{
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    .price-cards{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .price-card{
+        min-height: 644px;
+        /* max-width:304px; */
+        min-width: 310px;
+    }
+
+
+    .pricing__first{
+        flex-direction: row;
+        justify-content: space-between;
+     
+    }
+
+
+
+    .faq__heading{
+        font-size: 6rem;
+    }
+
+    .faq__matter{
+        min-width: 532px;
+        max-width: 532px;
+    }
+
+    .faq__accordion{
+        min-width: 720px;
+        max-width: 720px;
+    }
+
+    .faq__first{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .faqs{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .faq__image{
+        width: 249px;
+        height: 275px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .email-box--black{
+       min-width: 80%;
+       max-width: 80%;
+        order: 6;
+    }
+
+
+
+    .links-1{
+        order: 5;
+        position: relative;
+        top: -2rem;
+        width: 59%;
+    }
+
+    .socials{
+        order: 4;
+        
+     
+    }
+
+    .links-2{
+        order: 3;
+        min-width: 22%;
+     
+      
+    }
+
+    .footer__email{
+        order: 2;
+        min-width: 30%;
+        max-width: 30%;
+        /* margin-left: 19rem; */
+        position: initial;
+       
+
+     }
+     
+     .logo__white{
+        order: 1;
+        
+        
+     }
+
+     .copyright{
+        order: 7;
+        min-width: 60%;
+        max-width: 60%;
+     }
+
+     .footer__image-container{
+        min-width: 33%;
+        max-width: 33%;
+     }
+
+     .email{
+        min-width: 450px;
+        max-width: 450px;
+        margin-bottom: 3.5rem;
+    }
+    
+    .email--black input{
+
+        min-width:280px;
+        height: 52px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+
+    }
+
+    .email--black input::placeholder{
+       font-size: 1.8rem;
+    
+    }
+    
+    .btn-email--white{
+    
+        min-width:198px;
+        height: 52px;
+        margin-left:-0.3rem;
+        margin-bottom: 0;
+        font-size: 1.8rem;
+    }
+
+
+}
+
+@media screen and (min-width:1140px)
+{
+    .faq__image{
+        width: 360px;
+        height: 372px;
+    }
+}
+
+
+@media screen and (min-width:1440px)
+{
+
+    .mo{
+        display: none;
+    }
+
+    .pm{
+        display: initial;
+        margin-left: 2rem;
+        position: relative;
+        top: 1rem;
+
+    }
+
+    body{
+        /* padding:3.6rem 8rem; */
+    }
+
+    header{
+        padding:3.6rem 8rem;
+    }
+
+    main{
+        padding:3.6rem 8rem;
+    }
+
+    .hero__heading{
+        min-width:805px;
+        /* max-width: 721px; */
+    }
+
+    .about-us__img{
+        order:-1;
+        width:500px;
+        height: 500px;
+     }
+
+     .about-us__heading{
+        min-width:825px;
+        /* max-width: 750px; */
+
+     }
+
+     .about-us__matter{
+        min-width:712px;
+        max-width: 712px;
+     
+     }
+
+     .hiw__image{
+        width:490px;
+        height: 700px;
+    }
+
+    .hiw__heading{
+        min-width: 754px;
+    }
+
+    .pricing__img
+    {
+        
+        width:470px;
+        height: 500px;
+    }
+
+    .pricing__heading{
+        min-width: 827px;
+    }
+
+    .pricing__matter{
+        min-width: 516px;
+    }
+    
+    .price-card{
+        max-width:416px;
+        min-width: 416px;
+    }
+
+    .price-card button{
+        width:336px;
+    }
+
+    .email-box--black{
+        /* min-width: 80%;
+        max-width: 80%; */
+         order: 6;
+         margin-top: 4rem;
+     }
+ 
+ 
+ 
+     .links-1{
+         order: 3;
+         min-width: 18%;
+         max-width: 18%;
+     }
+ 
+     .socials{
+         order: 5;
+         
+      
+     }
+ 
+     .links-2{
+         order: 4;
+         /* min-width: 15%;
+         max-width: 15%; */
+       
+     }
+ 
+     .footer__email{
+         order: 2;
+         min-width: 15%;
+         max-width: 15%;
+         /* margin-left: 19rem; */
+        
+ 
+      }
+      
+      .logo__white{
+         order: 1;
+         
+         
+      }
+ 
+      .copyright{
+         order: 7;
+         /* min-width: 60%;
+         max-width: 60%; */
+      }
+ 
+      .footer__image-container{
+         /* min-width: 50%; */
+         max-width: 30%;
+      }
+
+
+ 
+}
+
+@media screen and (min-width:2560px)
+{
+    body{
+        /* padding:3.6rem 14rem; */
+    }
+
+    main{
+        padding:3.6rem 14rem;
+    }
+
+    header{
+        padding:3.6rem 14rem;
+    }
+
+    .hero{
+        justify-content: center;
+        gap:29rem;
+    }
+
+    .about-us{
+        justify-content: center;
+        gap:29rem;
+    }
+
+    .hiw{
+        justify-content: center;
+        gap:29rem;
+    }
+
+    .pricing__first
+    {
+        justify-content: center;
+        gap:29rem;
+    }
+
+    .price-cards{
+        justify-content: center;
+        gap: 14rem;
+    }
+
+    .price-card{
+        max-width:436px;
+        min-width: 436px;
+        
+    }
+
+    .faqs{
+  
+        justify-content: center;
+        gap:29rem;
+    }
+
+    .faq__image{
+        width: 508px;
+        height: 547px;
+    }
+
+    .email-box--black{
+        min-width: 90%;
+    }
+
+    footer{
+        padding: 8rem;
+    }
+}
