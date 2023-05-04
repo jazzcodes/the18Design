@@ -145,13 +145,13 @@ button{
 .btn-login:hover, 
 .btn-login:focus{
 
-    background-color: var(--main-gray);
+    background-color: var(--main-white);
 }
 
 .btn-signup:hover, 
 .btn-signup:focus
 {
-    color: var(--main-gray);
+    color: var(--main-black);
     background-color: var(--main-white);
 }
 
